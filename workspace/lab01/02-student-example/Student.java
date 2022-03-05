@@ -1,14 +1,21 @@
 class Student {
 
-    // ... Aggiungere qui la definizione dei campi
+	// ... Aggiungere qui la definizione dei campi
 
-    void build(/* Aggiungere i parametri di input */) {
-        // ... Inizializzazione dei campi della classe
+	private String name, surname;
+	private int id, matriculationYear;
+
+	void build(/* Aggiungere i parametri di input */String name, String surname, int id, int matriculationYear) {
+        this.name = name;
+        this.surname = surname;
+        this.id = id;
+        this.matriculationYear = matriculationYear;
     }
 
-    void printStudentInfo() {
-        /*
-         * Aggiungere i comandi per la stampa delle informazioni sullo studente
-         */
-    }
+	void printStudentInfo() {
+		/*
+		 * Aggiungere i comandi per la stampa delle informazioni sullo studente
+		 */
+		System.out.println(name + " - " + surname + " - " + id + " - " + matriculationYear);
+	}
 }

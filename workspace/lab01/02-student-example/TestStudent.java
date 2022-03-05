@@ -5,7 +5,7 @@ class TestStudent {
        * aggiornare l'invocazione del metodo build con l'aggiunta dei
        * parametri
        */
-      student.build();
+      student.build("Mario", "Rossi", 76237, 2019);
       student.printStudentInfo();
       /*
        * Creare dei nuovi oggetti relativi agli studenti:
@@ -16,5 +16,14 @@ class TestStudent {
        *
        * Stampare a video le informazioni relative a ciascuno studente.
        */
+      
+      student.build("Luigi", "Gentile", 1015, 2019);
+      student.printStudentInfo();
+      
+      student.build("Simone", "Bianchi", 1016, 2018);
+      student.printStudentInfo();
+      
+      student.build("Andrea", "Bracci", 1017, 2017);
+      student.printStudentInfo();
   }
 }
