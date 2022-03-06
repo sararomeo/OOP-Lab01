@@ -11,18 +11,30 @@ class UseTrain {
          *
          *
          * Testing: 1) Creare un oggetto della classe Train specificando valori
-         * a piacere per i parametri
-         *
-         * 2) Effettuare delle prenotazioni in prima e seconda classe
-         * specificando un numero di posti da prenotare consistente
-         *
-         * 3) A seguito di ciascuna prenotazione stampare la ratio di
-         * occupazione totale e per ciascuna classe.
-         *
-         * 4) Cancellare tutte le prenotazioni
-         *
-         * 5) Prenotare nuovamente dei posti e stampare le nuove percentuali di
-         * occupazione
-         */
+         * a piacere per i parametri*/
+    	
+    	Train train = new Train();
+    	train.build(50, 80);
+    	
+        /* 2) Effettuare delle prenotazioni in prima e seconda classe
+         * specificando un numero di posti da prenotare consistente */
+        
+    	train.reserveFirstClassSeats(20);
+    	train.reserveSecondClassSeats(40);
+    	
+        /* 3) A seguito di ciascuna prenotazione stampare la ratio di
+         * occupazione totale e per ciascuna classe. */
+    	
+    	System.out.println(train.getFirstClassOccupancyRatio());
+    	System.out.println(train.getSecondClassOccupancyRatio());
+        
+        /* 4) Cancellare tutte le prenotazioni */
+		train.deleteAllReservations();
+        
+        /* 5) Prenotare nuovamente dei posti e stampare le nuove percentuali di occupazione */
+        train.reserveFirstClassSeats(25);
+     	train.reserveSecondClassSeats(70);
+     	System.out.println(train.getFirstClassOccupancyRatio());
+    	System.out.println(train.getSecondClassOccupancyRatio());
     }
 }
